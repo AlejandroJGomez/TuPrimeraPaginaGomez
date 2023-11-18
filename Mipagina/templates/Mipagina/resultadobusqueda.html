@@ -1,0 +1,30 @@
+
+
+{% extends "Mipagina/index.html" %}
+{% load static %}
+
+{% block titulo %} Cursos Form {% endblock titulo %}
+
+{% block cuerpo %}
+    <div style="text-align: center;">
+        {% if cursos %}
+        <ul class="lista-cursos">
+            {% for curso in cursos %}
+                <li class="curso-nombre">{{ curso.nombre }}</li>
+                <li class="curso-camada">{{ curso.camada }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+
+    </div>
+{% endblock cuerpo %}
+<!--
+{% if cursos %}
+    <ul class="lista-cursos">
+        {% for curso in cursos %}
+            <li class="curso-nombre">{{ curso.nombre }}</li>
+            <li class="curso-camada">{{ curso.camada }}</li>
+        {% endfor %}
+    </ul>
+{% endif %} -->

@@ -1,0 +1,18 @@
+{% extends "Mipagina/index.html" %}
+{% load static %}
+
+{% block titulo %} Cursos Form {% endblock titulo %}
+
+{% block cuerpo %}
+    <div style="text-align: center;">
+        <h1 class="test-bg-info">Ingresar curso y camada</h1>
+        <form method="post" action="" style="max-width: 300px; margin: 0 auto;">
+            {% csrf_token %}
+            <p>Curso: <input type="text" name="nombre"></p>
+            <p>Camada: <input type="text" name="camada"></p>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+{% endblock cuerpo %}
+
+

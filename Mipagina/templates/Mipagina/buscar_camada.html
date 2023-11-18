@@ -1,0 +1,25 @@
+
+
+
+
+
+  
+
+
+{% extends "Mipagina/index.html" %}
+{% load static %}
+
+{% block titulo %} Cursos Form {% endblock titulo %}
+
+{% block cuerpo %}
+    <div style="text-align: center;">
+        <br>
+        <br>
+        <form action='buscar/' method='GET'>
+            <input type="number" name="camada" id= "camada">
+            <input type="submit" value="Buscar">
+        </form>  
+    </div>
+{% endblock cuerpo %}
+
+

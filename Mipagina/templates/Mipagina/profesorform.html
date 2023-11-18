@@ -1,0 +1,17 @@
+{% extends "Mipagina/index.html" %}
+{% load static %}
+
+{% block titulo %} Profesor Form {% endblock titulo %}
+
+{% block cuerpo %}
+    <div style="text-align: center;">
+        <h1 class="test-bg-info">Profesores</h1>
+        <form method="post" action="" style="max-width: 300px; margin: 0 auto;">
+            {% csrf_token %}
+            <table>
+                {{miformulario.as_table}}
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+{% endblock cuerpo %}
