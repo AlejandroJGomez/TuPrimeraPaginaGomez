@@ -1,6 +1,8 @@
 from django.db import models
 from django.shortcuts import render
 
+
+
 class Curso(models.Model):
         nombre=models.CharField(max_length=40)
         camada=models.IntegerField()

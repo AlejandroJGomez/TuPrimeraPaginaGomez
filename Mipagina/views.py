@@ -3,18 +3,12 @@ from Mipagina.models import *
 from Mipagina.forms import *
 from django.http import HttpResponse
 
+#////////////INDEX///////////////////////////////////////////////////////////
+
 
 def inicio(request):
     return render(request,"Mipagina/index.html")
 
-def cursos(request):
-    return render(request, "Mipagina/cursos.html")
-
-def profesores(request):
-    return render(request, "Mipagina/profesores.html")
-
-def estudiantes(request):
-    return render(request, "Mipagina/estudiantes.html")
 
 #////////////FORMULARIOS///////////////////////////////////////////////////////////
 
