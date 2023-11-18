@@ -4,15 +4,23 @@
 {% block titulo %} Cursos Form {% endblock titulo %}
 
 {% block cuerpo %}
-    <div style="text-align: center;">
-        <h1 class="test-bg-info">Ingresar curso y camada</h1>
+<div class="container">
+    <div class="text-center">
+        <h3 class="test-bg-info" style="font-family: 'Lucida Sans', sans-serif">Carga de curso y camada</h3 >
         <form method="post" action="" style="max-width: 300px; margin: 0 auto;">
-            {% csrf_token %}
-            <p>Curso: <input type="text" name="nombre"></p>
-            <p>Camada: <input type="text" name="camada"></p>
-            <input type="submit" value="Enviar">
+            <div class="form-group">
+                <label for="nombre">Curso:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="camada">Camada:</label>
+                <input type="text" class="form-control" id="camada" name="camada">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Enviar">
         </form>
     </div>
+</div>
+
 {% endblock cuerpo %}
 
 

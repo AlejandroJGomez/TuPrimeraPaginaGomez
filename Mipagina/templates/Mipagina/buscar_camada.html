@@ -1,11 +1,4 @@
 
-
-
-
-
-  
-
-
 {% extends "Mipagina/index.html" %}
 {% load static %}
 
@@ -15,9 +8,10 @@
     <div style="text-align: center;">
         <br>
         <br>
+        <h1 class="test-bg-info">Buscar Camada</h1>
         <form action='buscar/' method='GET'>
             <input type="number" name="camada" id= "camada">
-            <input type="submit" value="Buscar">
+            <input type="submit" class="btn btn-primary" value="Buscar">
         </form>  
     </div>
 {% endblock cuerpo %}

@@ -3,13 +3,7 @@ from Mipagina.models import *
 from Mipagina.forms import *
 from django.http import HttpResponse
 
-def curso(self):
-        curso=Curso(nombre="Python", camada=55555)
-        curso.save()
-        documentotexto=f"----->curso {curso.nombre} camada {curso.camada}"
-        return HttpResponse(documentotexto)
 
-# Create your views here.
 def inicio(request):
     return render(request,"Mipagina/index.html")
 
@@ -22,6 +16,7 @@ def profesores(request):
 def estudiantes(request):
     return render(request, "Mipagina/estudiantes.html")
 
+#////////////FORMULARIOS///////////////////////////////////////////////////////////
 
 def cursoform(request):
     # Aca pregunta qué método es POST o GET
@@ -58,12 +53,10 @@ def profesorform(request):
         miformulario=ProfesorForm()   
     return render(request, "Mipagina/profesorform.html",{'miformulario':miformulario})
 
+#/////////////////////////////Buscadores///////////////////////////////////////////////////////
 
 def buscar_camada(request):
     return render(request,"Mipagina/buscar_camada.html")    
-
-
-
 
 
 def buscar(request):
